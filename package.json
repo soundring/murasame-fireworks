@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@types/three": "^0.155.0",
+    "vite": "^4.4.9"
+  },
+  "dependencies": {
+    "three.quarks": "^0.10.4"
+  }
+}
