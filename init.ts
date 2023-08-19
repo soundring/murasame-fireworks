@@ -23,14 +23,14 @@ export const init = () => {
   camera.lookAt(cameraTarget);
 
   //光源
-  const dirLight = new THREE.DirectionalLight(0xffffff, 3); //color,強度
+  const dirLight = new THREE.DirectionalLight(0xffffff, 1); //color,強度
   scene.add(dirLight);
 
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderer.domElement);
 
   // 背景色の設定
-  renderer.setClearColor(0x888888);
+  renderer.setClearColor(0x111111);
 
   //glbファイルの読み込み
   const loader = new GLTFLoader();

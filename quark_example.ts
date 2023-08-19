@@ -23,14 +23,14 @@ const addMuzzle = (scene: THREE.Scene): BatchedRenderer => {
   const muzzle: ParticleSystemParameters = {
     duration: 1,
     looping: true,
-    startLife: new IntervalValue(0.1, 0.2),
-    startSpeed: new ConstantValue(10),
-    startSize: new IntervalValue(1, 3),
+    startLife: new IntervalValue(0.1, 0.5),
+    startSpeed: new ConstantValue(5),
+    startSize: new IntervalValue(0.5, 1.5),
     startColor: new ConstantColor(new THREE.Vector4(1, 1, 1, 1)),
     worldSpace: false,
 
     // maxParticle: 5,
-    emissionOverTime: new ConstantValue(50),
+    emissionOverTime: new ConstantValue(20),
     emissionBursts: [
       {
         time: 0,
@@ -70,7 +70,7 @@ const addMuzzle = (scene: THREE.Scene): BatchedRenderer => {
   //     new FrameOverLife(new PiecewiseBezier([[new Bezier(91, 94, 97, 100), 0]]))
   //   );
   muzzle1.emitter.name = 'muzzle1';
-  muzzle1.emitter.position.x = 1;
+  muzzle1.emitter.position.x = 0;
 
   batchSystem.addSystem(muzzle1);
 
